@@ -9,3 +9,61 @@
   font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: #666;
 }
+
+/* Custom 3-column grid layout */
+.ui.three.column.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0;
+}
+
+.ui.three.column.grid .column {
+  display: block;
+}
+
+.ui.card.fluid {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.ui.card .image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.ui.card .content {
+  padding: 1rem;
+}
+
+.ui.card .header {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.ui.card .meta {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.ui.card .meta .meta-info {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .ui.three.column.grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .ui.three.column.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
